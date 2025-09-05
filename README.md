@@ -58,20 +58,29 @@ python "RAG system.py"
 ```
 ## Example Query
 The script is hardcoded to query: "**What is RAG?**"
+
 The system will retrieve context from sample1.txt related to this question and generate an answer based on that context.
 
 ## Code Overview / Key Components
 Text Loader & Splitter: TextLoader, RecursiveCharacterTextSplitter
+
 Embedding Model: HuggingFaceEmbeddings with BAAI/bge-small-en-v1.5
+
 Vector Database: chromadb.Client
+
 Language Model: GPT2LMHeadModel from Hugging Face Transformers
+
 Retrieval & Generation Logic: The core RAG logic is implemented by querying ChromaDB and formatting the prompt for the GPT-2 model.
 
 ## Customization
 Knowledge Source: Change the file_path in the TextLoader to point to your own .txt file.
+
 Chunking: Adjust chunk_size and chunk_overlap in the RecursiveCharacterTextSplitter to tune context retrieval.
+
 Embeddings: Swap the model_name in HuggingFaceEmbeddings to use a different embedding model (e.g., all-MiniLM-L6-v2).
+
 Query: Modify the query_text variable to ask different questions of your document.
+
 LLM: You can replace the GPT-2 model with a larger one (gpt2-medium, gpt2-large) or a different model entirely from Hugging Face.
 
 ## Important Notes
