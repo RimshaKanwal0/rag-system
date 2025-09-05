@@ -5,9 +5,13 @@ The system is built using LangChain for document processing, ChromaDB as a vecto
 
 ##  Features
 Document Loading & Text Splitting: Loads a text document and splits it into manageable, overlapping chunks for optimal context retrieval.
+
 Vector Embeddings: Generates dense vector representations of text chunks using the BAAI/bge-small-en-v1.5 model for high-quality semantic search.
+
 Vector Database: Stores and indexes embeddings in ChromaDB for fast and efficient similarity queries.
+
 Contextual Retrieval: For a given user query, retrieves the most relevant text chunks from the knowledge base.
+
 Answer Generation: Leverages a GPT-2 model to synthesize a coherent answer based on the retrieved context and the original query.
 
 ```bash
