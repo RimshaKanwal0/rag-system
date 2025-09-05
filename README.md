@@ -48,11 +48,17 @@ Place the text you want to use as your knowledge source in a file (e.g., sample1
 The main script (RAG system.py) performs the following steps sequentially:
 
 Load Document: Uses TextLoader to read the text file.
+
 Split Text: Uses RecursiveCharacterTextSplitter to create chunks of text with a specified size and overlap.
+
 Create Embeddings: Initializes the HuggingFace embedding model to convert text chunks into vectors.
+
 Initialize ChromaDB: Creates a persistent ChromaDB client and collection to store the vectors and their metadata.
+
 Populate Database: Adds the generated embeddings and their corresponding text chunks (metadata) to the database.
+
 Query the System: Takes a user query (e.g., "What is RAG?"), retrieves the most relevant chunks from the database, and constructs a prompt.
+
 Generate Response: Feeds the prompt to the GPT-2 model to generate a contextual answer.
 
 **To run the entire pipeline, simply execute the script:**
