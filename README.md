@@ -39,6 +39,7 @@ pip install torch
 ## Usage
 **1. Prepare Your Knowledge Base**
 Place the text you want to use as your knowledge source in a file (e.g., sample1.txt) in the same directory as your script.
+
 **2. Run the RAG Pipeline**
 The main script (RAG system.py) performs the following steps sequentially:
 
@@ -74,8 +75,11 @@ Query: Modify the query_text variable to ask different questions of your documen
 LLM: You can replace the GPT-2 model with a larger one (gpt2-medium, gpt2-large) or a different model entirely from Hugging Face.
 
 ## Important Notes
+
 >This implementation uses GPT-2, which is a relatively small model. For more sophisticated and accurate generation, consider using a larger model like GPT-3.5/GPT-4 (via API), Llama 2, or Mistral.
+
 >The current setup is designed for simplicity and runs in a single script. For production use, you would want to modularize the code and create a proper API.
+
 >The ChromaDB persistence directory is set to ./chroma_storage. Delete this folder if you change your source document to force a re-creation of the vector store.
 
 ## License
